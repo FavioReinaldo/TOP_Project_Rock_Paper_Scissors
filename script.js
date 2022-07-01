@@ -63,5 +63,7 @@ function checkWinner() {
 }
 
 function endGame(){
-    
+    playerChoiceBtn.forEach((button) => {
+        button.removeEventListener("click", game(button.value));
+    });
 }
