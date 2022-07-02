@@ -60,5 +60,18 @@ div{
 
 #playerScore, #computerScore{
     margin: 20px;
-    border: 1px solid rgb(187, 225, 250);
+    border: 2px solid rgb(187, 225, 250);
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+}
+
+#scoreDiv{
+    display: flex;
+    flex-direction: column;
+}
+#result{
+    height: 50px;
 }
