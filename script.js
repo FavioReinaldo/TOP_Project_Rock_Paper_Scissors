@@ -2,13 +2,15 @@
 let playerScore = 0;
 let computerScore = 0;
 
+document.querySelector("#reset").addEventListener("click", resetGame);
+
 let playerChoiceBtn = document.querySelectorAll(".playerChoiceBtn"); //this generates an array with the 3 buttons
 playerChoiceBtn.forEach((button) => {
-  button.addEventListener("click", game(button.value));
+  button.addEventListener("click", game);//button.value
 });
 
-
-function game(playerSelection) {
+function game(button) {
+    let playerSelection = button.target.value;
   playRound(playerSelection, computerPlay());
   checkWinner();
 }
@@ -58,12 +60,16 @@ function checkWinner() {
     } else {
       document.querySelector("#result").innerHTML = "You lost the game!";
     }
+    endGame();
   }
-  endGame();
 }
 
 function endGame(){
     playerChoiceBtn.forEach((button) => {
-        button.removeEventListener("click", game(button.value));
+        button.removeEventListener("click", game);
     });
+}
+
+function resetGame(){
+    location.reload(); 
 }
