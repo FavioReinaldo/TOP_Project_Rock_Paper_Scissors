@@ -54,11 +54,11 @@ function updateDOM(playerScore, computerScore, result) {
 function checkWinner() {
   if (computerScore === 5 || playerScore === 5) {
     if (computerScore === playerScore) {
-      document.querySelector("#result").innerHTML = "The game is a Tie!";
+      document.querySelector("#result").innerHTML = "The game is a Tie! Press reset to play again";
     } else if (playerScore > computerScore) {
-      document.querySelector("#result").innerHTML = "You win the game!";
+      document.querySelector("#result").innerHTML = "You win the game! Press reset to play again";
     } else {
-      document.querySelector("#result").innerHTML = "You lost the game!";
+      document.querySelector("#result").innerHTML = "You lost the game! Press reset to play again";
     }
     endGame();
   }
